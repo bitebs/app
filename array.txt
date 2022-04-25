@@ -1,0 +1,40 @@
+package com.company.sumvalues;
+
+public class ArraySum {
+    //Write a Java program to sum values of an array.
+    public static void main(String[] args) {
+        int[] my_array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+
+    }
+
+    public static int getSum(int[] my_array){
+        int sum = 0;
+
+        for (int i : my_array)
+            sum += i;
+        return sum;
+    }
+
+}
+
+-------------------------------------------------------------------------------------------------------
+
+package com.company.sumvalues;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class ArraySumTest {
+
+
+    @Test
+    public void getSum(){
+        assertEquals(55, ArraySum.getSum(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
+        assertEquals(56, ArraySum.getSum(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
+        assertEquals(55, ArraySum.getSum(new int[]{1, 2, 3, 5, 5, 6, 7, 8, 9, 10}));
+    }
+
+}
