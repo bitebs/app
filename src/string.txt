@@ -1,0 +1,48 @@
+package com.company;
+
+public class Math2 {
+    public static void main(String[] args) {
+
+
+        //System.out.println("Comparing "+str1+" and "+stringBuffer+": " + str1.contentEquals(stringBuffer));
+
+        //System.out.println("Comparing "+str2+" and "+stringBuffer+": " + str2.contentEquals(stringBuffer));
+    }
+
+    public static boolean getStringEquals(String str){
+        String str1 = "example.com", str2 = "Example.com";
+        StringBuffer stringBuffer = new StringBuffer(str1);
+        boolean stringEquals = false;
+        return stringEquals;
+    }
+
+    public static boolean getStringEquals1(String str){
+        String str1 = "example.com", str2 = "Example.com";
+        StringBuffer stringBuffer = new StringBuffer(str1);
+        boolean stringEquals = true;
+        return stringEquals;
+    }
+}
+
+
+--------------------------------------------------------------------------------
+
+package com.company;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public class Math2Test {
+    @Test
+    public void getStringEquals(){
+        String str = null;
+        assertEquals(false, Math2.getStringEquals(str));
+    }
+
+    @Test
+    public void getStringEquals1(){
+        String str = null;
+        assertEquals(true, Math2.getStringEquals(str));
+    }
+}
